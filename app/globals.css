@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
 :root {
-  --background: #fdfaf5;
-  --foreground: #1a1a1a;
+  --background: #fff7ef;
+  --foreground: #34211a;
 }
 
 @theme inline {
@@ -11,14 +11,30 @@
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 
-  --color-charcoal: #1a1a1a;
-  --color-orange: #e8864a;
-  --color-peach: #f2a96b;
-  --color-cream: #fdfaf5;
+  /* Warm palette pulled from the FeelingFullLA logo */
+  --color-charcoal: #34211a; /* warm near-black: dark text, footer, dark cards */
+  --color-orange: #f0863f; /* primary accent */
+  --color-peach: #f7a862; /* accent hover */
+  --color-gold: #fbc35a; /* gradient highlight */
+  --color-coral: #f26d6d; /* gradient start */
+  --color-cream: #fff7ef; /* warm off-white */
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+}
+
+/* Signature warm gradient (coral -> orange -> gold), matching the logo backdrop */
+.brand-gradient {
+  background: linear-gradient(115deg, #f26d6d 0%, #f2854f 52%, #fbc35a 100%);
+}
+
+/* Same gradient clipped to text, for accent words on light backgrounds */
+.brand-gradient-text {
+  background: linear-gradient(115deg, #e85d6a 0%, #ef7f45 55%, #f2a63f 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }

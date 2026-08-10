@@ -1,17 +1,29 @@
 "use client";
 
 import { useState } from "react";
-
-const OCCUPATIONS = [
-  "Student",
-  "Employed",
-  "Unemployed",
-  "Retired",
-  "Other",
-];
+import { sendForm } from "../lib/forms";
 
 export default function VolunteerPage() {
   const [submitted, setSubmitted] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+  const [error, setError] = useState(false);
+
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    setError(false);
+    setSubmitting(true);
+
+    const data = new FormData(e.currentTarget);
+    const ok = await sendForm({
+      Name: String(data.get("name") ?? ""),
+      "Why they want to volunteer": String(data.get("reason") ?? ""),
+      _subject: "New volunteer signup — FeelingFullLA",
+    });
+
+    setSubmitting(false);
+    if (ok) setSubmitted(true);
+    else setError(true);
+  }
 
   return (
     <section className="bg-cream">
@@ -24,8 +36,8 @@ export default function VolunteerPage() {
             Join the FeelingFullLA team.
           </h1>
           <p className="mx-auto mt-4 max-w-xl text-charcoal/70">
-            Placeholder text — tell us a bit about yourself and we&apos;ll
-            follow up with upcoming food rescue and distribution events.
+            Tell us a bit about yourself and we&apos;ll follow up with
+            upcoming food rescue and distribution events.
           </p>
         </div>
 
@@ -41,10 +53,7 @@ export default function VolunteerPage() {
         ) : (
           <form
             className="mt-12 space-y-6 rounded-2xl border border-charcoal/10 bg-white p-8"
-            onSubmit={(e) => {
-              e.preventDefault();
-              setSubmitted(true);
-            }}
+            onSubmit={handleSubmit}
           >
             <div>
               <label
@@ -65,31 +74,6 @@ export default function VolunteerPage() {
 
             <div>
               <label
-                htmlFor="occupation"
-                className="block text-sm font-semibold text-charcoal"
-              >
-                Occupation
-              </label>
-              <select
-                id="occupation"
-                name="occupation"
-                required
-                defaultValue=""
-                className="mt-2 w-full rounded-lg border border-charcoal/15 px-4 py-3 text-charcoal focus:border-orange focus:outline-none"
-              >
-                <option value="" disabled>
-                  Select one
-                </option>
-                {OCCUPATIONS.map((option) => (
-                  <option key={option} value={option}>
-                    {option}
-                  </option>
-                ))}
-              </select>
-            </div>
-
-            <div>
-              <label
                 htmlFor="reason"
                 className="block text-sm font-semibold text-charcoal"
               >
@@ -105,11 +89,25 @@ export default function VolunteerPage() {
               />
             </div>
 
+            {error && (
+              <p className="text-sm font-medium text-red-600">
+                Something went wrong. Please try again, or email us directly at{" "}
+                <a
+                  href="mailto:feelingfulllosangeles@gmail.com"
+                  className="underline"
+                >
+                  feelingfulllosangeles@gmail.com
+                </a>
+                .
+              </p>
+            )}
+
             <button
               type="submit"
-              className="w-full rounded-full bg-orange px-6 py-3 text-sm font-semibold text-charcoal transition-colors hover:bg-peach"
+              disabled={submitting}
+              className="w-full rounded-full bg-orange px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-peach disabled:cursor-not-allowed disabled:opacity-60"
             >
-              Submit
+              {submitting ? "Submitting..." : "Submit"}
             </button>
           </form>
         )}

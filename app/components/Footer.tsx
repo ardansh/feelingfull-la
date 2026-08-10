@@ -5,8 +5,8 @@ export default function Footer() {
     <footer className="bg-charcoal text-cream/70">
       <div className="mx-auto flex max-w-6xl flex-col gap-8 px-6 py-12 sm:flex-row sm:justify-between">
         <div>
-          <p className="text-lg font-semibold text-cream">
-            Feeling<span className="text-orange">Full</span>LA
+          <p className="text-lg font-light text-cream">
+            feelingfull<span className="font-extrabold text-orange">LA</span>
           </p>
           <p className="mt-2 max-w-xs text-sm">
             A highschool-run nonprofit reducing food waste and fighting

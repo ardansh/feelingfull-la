@@ -17,14 +17,14 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 bg-charcoal text-cream">
+    <header className="brand-gradient sticky top-0 z-50 text-white shadow-sm">
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
         <Link
           href="/"
-          className="text-lg font-semibold tracking-tight"
+          className="text-lg font-light tracking-tight"
           onClick={() => setOpen(false)}
         >
-          Feeling<span className="text-orange">Full</span>LA
+          feelingfull<span className="font-extrabold">LA</span>
         </Link>
 
         <ul className="hidden items-center gap-8 text-sm font-medium md:flex">
@@ -34,8 +34,8 @@ export default function Navbar() {
               <li key={link.href}>
                 <Link
                   href={link.href}
-                  className={`transition-colors hover:text-orange ${
-                    active ? "text-orange" : "text-cream/80"
+                  className={`transition-colors hover:text-white ${
+                    active ? "font-semibold text-white" : "text-white/80"
                   }`}
                 >
                   {link.label}
@@ -47,7 +47,7 @@ export default function Navbar() {
 
         <Link
           href="/volunteer"
-          className="hidden rounded-full bg-orange px-5 py-2 text-sm font-semibold text-charcoal transition-colors hover:bg-peach md:inline-block"
+          className="hidden rounded-full bg-white px-5 py-2 text-sm font-semibold text-charcoal transition-colors hover:bg-cream md:inline-block"
         >
           Get Involved
         </Link>
@@ -59,17 +59,17 @@ export default function Navbar() {
           onClick={() => setOpen((prev) => !prev)}
         >
           <span
-            className={`h-0.5 w-6 bg-cream transition-transform ${
+            className={`h-0.5 w-6 bg-white transition-transform ${
               open ? "translate-y-2 rotate-45" : ""
             }`}
           />
           <span
-            className={`h-0.5 w-6 bg-cream transition-opacity ${
+            className={`h-0.5 w-6 bg-white transition-opacity ${
               open ? "opacity-0" : ""
             }`}
           />
           <span
-            className={`h-0.5 w-6 bg-cream transition-transform ${
+            className={`h-0.5 w-6 bg-white transition-transform ${
               open ? "-translate-y-2 -rotate-45" : ""
             }`}
           />
@@ -77,7 +77,7 @@ export default function Navbar() {
       </nav>
 
       {open && (
-        <ul className="flex flex-col gap-1 border-t border-cream/10 px-6 pb-6 md:hidden">
+        <ul className="flex flex-col gap-1 border-t border-white/20 px-6 pb-6 md:hidden">
           {NAV_LINKS.map((link) => {
             const active = pathname === link.href;
             return (
@@ -86,7 +86,7 @@ export default function Navbar() {
                   href={link.href}
                   onClick={() => setOpen(false)}
                   className={`block rounded-lg px-3 py-3 text-base font-medium transition-colors ${
-                    active ? "text-orange" : "text-cream/80 hover:text-orange"
+                    active ? "font-semibold text-white" : "text-white/80 hover:text-white"
                   }`}
                 >
                   {link.label}

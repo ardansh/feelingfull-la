@@ -10,18 +10,17 @@ const PARTNERS = [
 export default function PartnersPage() {
   return (
     <>
-      <section className="bg-charcoal text-cream">
+      <section className="brand-gradient text-white">
         <div className="mx-auto max-w-4xl px-6 py-20 text-center sm:py-28">
-          <span className="inline-block rounded-full bg-orange/15 px-4 py-1 text-xs font-semibold uppercase tracking-wide text-orange">
+          <span className="inline-block rounded-full bg-white/20 px-4 py-1 text-xs font-semibold uppercase tracking-wide text-white">
             Our Partners
           </span>
           <h1 className="mt-6 text-3xl font-bold sm:text-5xl">
             We don&apos;t do this alone.
           </h1>
-          <p className="mx-auto mt-4 max-w-xl text-cream/70">
-            Placeholder text — FeelingFullLA works alongside local food
-            banks, parishes, and student organizations to get food where it
-            needs to go.
+          <p className="mx-auto mt-4 max-w-xl text-white/90">
+            FeelingFullLA works alongside local food banks, parishes, and
+            student organizations to get food where it needs to go.
           </p>
         </div>
       </section>
@@ -40,10 +39,6 @@ export default function PartnersPage() {
                 <h3 className="text-lg font-bold text-charcoal">
                   {partner.name}
                 </h3>
-                <p className="text-sm text-charcoal/60">
-                  Placeholder description of this partnership and how it
-                  supports the mission.
-                </p>
               </div>
             ))}
           </div>

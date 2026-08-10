@@ -1,9 +1,38 @@
 "use client";
 
 import { useState } from "react";
+import { sendForm } from "../lib/forms";
+
+const REASON_LABELS: Record<string, string> = {
+  "vendor-donation": "Vendor / Food Donation",
+  "food-bank-partnership": "Food Bank Partnership",
+  general: "General Inquiry",
+  other: "Other",
+};
 
 export default function ContactPage() {
   const [submitted, setSubmitted] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+  const [error, setError] = useState(false);
+
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    setError(false);
+    setSubmitting(true);
+
+    const data = new FormData(e.currentTarget);
+    const reason = String(data.get("reason") ?? "");
+    const ok = await sendForm({
+      Name: String(data.get("name") ?? ""),
+      "Reason for contact": REASON_LABELS[reason] ?? reason,
+      Message: String(data.get("message") ?? ""),
+      _subject: "New contact message — FeelingFullLA",
+    });
+
+    setSubmitting(false);
+    if (ok) setSubmitted(true);
+    else setError(true);
+  }
 
   return (
     <section className="bg-cream">
@@ -16,8 +45,8 @@ export default function ContactPage() {
             For vendors &amp; food banks.
           </h1>
           <p className="mx-auto mt-4 max-w-xl text-charcoal/70">
-            Placeholder text — reach out if you&apos;d like to donate
-            surplus food, partner on a distribution, or learn more.
+            Reach out if you&apos;d like to donate surplus food, partner on a
+            distribution, or learn more.
           </p>
         </div>
 
@@ -60,10 +89,7 @@ export default function ContactPage() {
           ) : (
             <form
               className="space-y-6 rounded-2xl border border-charcoal/10 bg-white p-8"
-              onSubmit={(e) => {
-                e.preventDefault();
-                setSubmitted(true);
-              }}
+              onSubmit={handleSubmit}
             >
               <div>
                 <label
@@ -125,11 +151,26 @@ export default function ContactPage() {
                 />
               </div>
 
+              {error && (
+                <p className="text-sm font-medium text-red-600">
+                  Something went wrong. Please try again, or email us directly
+                  at{" "}
+                  <a
+                    href="mailto:feelingfulllosangeles@gmail.com"
+                    className="underline"
+                  >
+                    feelingfulllosangeles@gmail.com
+                  </a>
+                  .
+                </p>
+              )}
+
               <button
                 type="submit"
-                className="w-full rounded-full bg-orange px-6 py-3 text-sm font-semibold text-charcoal transition-colors hover:bg-peach"
+                disabled={submitting}
+                className="w-full rounded-full bg-orange px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-peach disabled:cursor-not-allowed disabled:opacity-60"
               >
-                Send Message
+                {submitting ? "Sending..." : "Send Message"}
               </button>
             </form>
           )}
