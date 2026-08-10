@@ -15,9 +15,18 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://feelingfullla.org"),
   title: "FeelingFullLA | Reducing Food Waste in Los Angeles",
   description:
     "FeelingFullLA is a highschool-run nonprofit reducing food waste and fighting hunger across Los Angeles and beyond.",
+  openGraph: {
+    title: "FeelingFullLA | Reducing Food Waste in Los Angeles",
+    description:
+      "A highschool-run nonprofit reducing food waste and fighting hunger across Los Angeles and beyond.",
+    url: "https://feelingfullla.org",
+    siteName: "FeelingFullLA",
+    type: "website",
+  },
 };
 
 export default function RootLayout({

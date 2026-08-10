@@ -1,14 +1,19 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Footer() {
   return (
     <footer className="bg-charcoal text-cream/70">
       <div className="mx-auto flex max-w-6xl flex-col gap-8 px-6 py-12 sm:flex-row sm:justify-between">
         <div>
-          <p className="text-lg font-light text-cream">
-            feelingfull<span className="font-extrabold text-orange">LA</span>
-          </p>
-          <p className="mt-2 max-w-xs text-sm">
+          <Image
+            src="/logo.png"
+            alt="FeelingFullLA logo"
+            width={112}
+            height={112}
+            className="h-24 w-24 rounded-2xl"
+          />
+          <p className="mt-4 max-w-xs text-sm">
             A highschool-run nonprofit reducing food waste and fighting
             hunger across Los Angeles.
           </p>

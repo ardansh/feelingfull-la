@@ -76,6 +76,13 @@ export default function Home() {
 
       <section className="bg-cream">
         <div className="mx-auto max-w-6xl px-6 py-20 text-center">
+          <Image
+            src="/logo.png"
+            alt="FeelingFullLA logo"
+            width={128}
+            height={128}
+            className="mx-auto mb-8 h-28 w-28 rounded-3xl shadow-lg"
+          />
           <h2 className="text-3xl font-bold text-charcoal sm:text-4xl">
             Every meal starts with someone who cares.
           </h2>
