@@ -14,27 +14,18 @@ const MANAGEMENT = [
   { name: "Todd Valkov", role: "Head of Outreach (2022–2024)" },
 ];
 
-// Volunteers — listed with consent.
-const VOLUNTEERS = [
-  "Henry Lawrence",
+// Senior volunteers — listed with consent, first-name alphabetical order.
+const SENIOR_VOLUNTEERS = [
   "Ardan Shendrikar",
-  "Kiarash Vazirnezami",
-  "Josh Huang",
-  "Kai Pringle",
-  "Zachary Amster",
-  "Atticus Coluzzi",
-  "Shyan Chadha",
-  "Ronen Hayempour",
-  "Ansar Sherkhanov",
-  "Harrison Schumacher",
-  "Lorenz Collins",
-  "Rocco Fama",
-  "Todd Valkov",
-  "Rama Karimi",
   "Eric Cacavas",
-  "Jackson Ford",
+  "Henry Lawrence",
+  "Lajus Collins",
+  "Lorenz Collins",
+  "Martha Valkov",
   "Noah Benharash",
-  "Darian Bagheri",
+  "Rama Karimi",
+  "Todd Valkov",
+  "Zachary Amster",
 ];
 
 function initials(name: string) {
@@ -89,13 +80,14 @@ export default function TeamPage() {
           </div>
 
           <h2 className="mt-16 text-2xl font-bold text-charcoal sm:text-3xl">
-            Volunteers
+            Senior Volunteers
           </h2>
           <p className="mt-2 max-w-2xl text-sm text-charcoal/60">
-            The heart of FeelingFullLA — thank you to everyone who shows up.
+            Our most dedicated volunteers — thank you for showing up again and
+            again.
           </p>
           <div className="mt-8 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4">
-            {VOLUNTEERS.map((name) => (
+            {SENIOR_VOLUNTEERS.map((name) => (
               <div
                 key={name}
                 className="flex items-center gap-3 rounded-xl border border-charcoal/10 bg-white px-4 py-3"
