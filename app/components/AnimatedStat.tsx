@@ -46,11 +46,11 @@ export default function AnimatedStat({
 
   return (
     <div ref={ref} className="text-center">
-      <p className="text-4xl font-bold text-white sm:text-5xl">
+      <p className="text-4xl font-bold text-orange sm:text-5xl">
         {value.toLocaleString()}
         {suffix}
       </p>
-      <p className="mt-2 text-sm font-medium text-white/80 sm:text-base">
+      <p className="mt-2 text-sm font-medium text-charcoal/70 sm:text-base">
         {label}
       </p>
     </div>

@@ -15,21 +15,21 @@ const GALLERY = [
 export default function Home() {
   return (
     <>
-      <section className="brand-gradient text-white">
-        <div className="mx-auto max-w-6xl px-6 py-20 sm:py-28">
-          <h1 className="max-w-2xl text-4xl font-bold leading-tight sm:text-6xl">
-            Filling plates.{" "}
-            <span className="text-charcoal">Reducing waste.</span> Building
-            community.
+      <section className="bg-cream text-charcoal">
+        <div className="mx-auto max-w-6xl px-6 py-20 text-center sm:py-28">
+          <h1 className="mx-auto max-w-4xl text-4xl font-bold leading-tight sm:text-6xl">
+            <span className="brand-gradient-text">
+              Filling plates. Reducing waste. Building community.
+            </span>
           </h1>
-          <p className="mt-6 max-w-xl text-lg text-white/90">
-            We&apos;re a highschool-run nonprofit that rescues surplus food and
-            gets it to neighbors across Los Angeles who need it most.
+          <p className="mx-auto mt-6 max-w-xl text-lg text-charcoal/70">
+            We&apos;re a local charity that rescues surplus food and gets it to
+            neighbors across Los Angeles who need it most.
           </p>
           <div className="mt-8">
             <Link
               href="/mission"
-              className="inline-block rounded-full bg-white px-6 py-3 text-sm font-semibold text-charcoal transition-colors hover:bg-cream"
+              className="inline-block rounded-full bg-charcoal px-6 py-3 text-sm font-semibold text-cream transition-colors hover:bg-orange"
             >
               Our Mission
             </Link>
@@ -56,7 +56,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="border-t border-white/20">
+        <div className="border-t border-charcoal/10">
           <div className="mx-auto grid max-w-6xl grid-cols-1 gap-8 px-6 py-16 sm:grid-cols-3">
             <AnimatedStat target={100000} suffix="+" label="Lbs. of Food Donated" />
             <AnimatedStat target={6} suffix="+" label="Community Partners" />
@@ -72,14 +72,11 @@ export default function Home() {
             alt="FeelingFullLA logo"
             width={128}
             height={128}
-            className="mx-auto mb-8 h-28 w-28 rounded-3xl shadow-lg"
+            className="mx-auto mb-10 h-28 w-28 rounded-3xl shadow-lg"
           />
-          <h2 className="text-3xl font-bold text-charcoal sm:text-4xl">
-            Every meal starts with someone who cares.
-          </h2>
           <Link
             href="/contact"
-            className="mt-8 inline-block rounded-full bg-charcoal px-6 py-3 text-sm font-semibold text-cream transition-colors hover:bg-orange"
+            className="inline-block rounded-full bg-charcoal px-12 py-6 text-lg font-semibold text-cream transition-colors hover:bg-orange sm:text-xl"
           >
             Partner With Us
           </Link>
