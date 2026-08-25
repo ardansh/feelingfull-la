@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import AnimatedStat from "./components/AnimatedStat";
+import { INTEREST_FORM_URL } from "./components/GoogleFormEmbed";
 
 const GALLERY = [
   { src: "/gallery-1.png", alt: "FeelingFullLA volunteers with awards at Upward Bound House" },
@@ -30,12 +31,14 @@ export default function Home() {
             neighbors across Los Angeles who need it most.
           </p>
           <div className="mt-8 flex flex-wrap gap-4">
-            <Link
-              href="/volunteer"
+            <a
+              href={INTEREST_FORM_URL}
+              target="_blank"
+              rel="noopener noreferrer"
               className="rounded-full bg-white px-6 py-3 text-sm font-semibold text-charcoal transition-colors hover:bg-cream"
             >
               Volunteer With Us
-            </Link>
+            </a>
             <Link
               href="/mission"
               className="rounded-full border border-white/50 px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-white/10"

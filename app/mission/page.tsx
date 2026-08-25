@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { INTEREST_FORM_URL } from "../components/GoogleFormEmbed";
 
 const PILLARS = [
   {
@@ -56,12 +56,14 @@ export default function MissionPage() {
             <h2 className="text-2xl font-bold text-charcoal sm:text-3xl">
               Want to be part of the work?
             </h2>
-            <Link
-              href="/volunteer"
+            <a
+              href={INTEREST_FORM_URL}
+              target="_blank"
+              rel="noopener noreferrer"
               className="mt-6 inline-block rounded-full bg-orange px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-peach"
             >
               Get Involved
-            </Link>
+            </a>
           </div>
         </div>
       </section>

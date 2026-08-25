@@ -46,8 +46,8 @@ export default function Footer() {
           <Link href="/partners" className="transition-colors hover:text-orange">
             Our Partners
           </Link>
-          <Link href="/volunteer" className="transition-colors hover:text-orange">
-            Volunteer
+          <Link href="/team" className="transition-colors hover:text-orange">
+            Our Team
           </Link>
         </div>
       </div>

@@ -3,12 +3,13 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
+import { INTEREST_FORM_URL } from "./GoogleFormEmbed";
 
 const NAV_LINKS = [
   { href: "/", label: "Home" },
   { href: "/mission", label: "Mission" },
   { href: "/partners", label: "Partners" },
-  { href: "/volunteer", label: "Volunteer" },
+  { href: "/team", label: "Team" },
   { href: "/contact", label: "Contact" },
 ];
 
@@ -45,12 +46,14 @@ export default function Navbar() {
           })}
         </ul>
 
-        <Link
-          href="/volunteer"
+        <a
+          href={INTEREST_FORM_URL}
+          target="_blank"
+          rel="noopener noreferrer"
           className="hidden rounded-full bg-white px-5 py-2 text-sm font-semibold text-charcoal transition-colors hover:bg-cream md:inline-block"
         >
           Get Involved
-        </Link>
+        </a>
 
         <button
           type="button"
