@@ -14,8 +14,8 @@ export default function Footer() {
             className="h-24 w-24 rounded-2xl"
           />
           <p className="mt-4 max-w-xs text-sm">
-            A highschool-run nonprofit reducing food waste and fighting
-            hunger across Los Angeles.
+            A local charity reducing food waste and fighting hunger across Los
+            Angeles.
           </p>
         </div>
 
