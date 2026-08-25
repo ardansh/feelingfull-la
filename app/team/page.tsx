@@ -42,10 +42,7 @@ export default function TeamPage() {
     <>
       <section className="brand-gradient text-white">
         <div className="mx-auto max-w-4xl px-6 py-20 text-center sm:py-28">
-          <span className="inline-block rounded-full bg-white/20 px-4 py-1 text-xs font-semibold uppercase tracking-wide text-white">
-            Team &amp; Alumni
-          </span>
-          <h1 className="mt-6 text-3xl font-bold sm:text-5xl">
+          <h1 className="text-3xl font-bold sm:text-5xl">
             The people behind FeelingFullLA.
           </h1>
           <p className="mx-auto mt-4 max-w-xl text-white/90">

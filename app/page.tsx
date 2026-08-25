@@ -1,7 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
 import AnimatedStat from "./components/AnimatedStat";
-import { INTEREST_FORM_URL } from "./components/GoogleFormEmbed";
 
 const GALLERY = [
   { src: "/gallery-1.png", alt: "FeelingFullLA volunteers with awards at Upward Bound House" },
@@ -18,30 +17,19 @@ export default function Home() {
     <>
       <section className="brand-gradient text-white">
         <div className="mx-auto max-w-6xl px-6 py-20 sm:py-28">
-          <span className="inline-block rounded-full bg-white/20 px-4 py-1 text-xs font-semibold uppercase tracking-wide text-white">
-            Highschool-run nonprofit · Los Angeles
-          </span>
-          <h1 className="mt-6 max-w-2xl text-4xl font-bold leading-tight sm:text-6xl">
+          <h1 className="max-w-2xl text-4xl font-bold leading-tight sm:text-6xl">
             Filling plates.{" "}
             <span className="text-charcoal">Reducing waste.</span> Building
             community.
           </h1>
           <p className="mt-6 max-w-xl text-lg text-white/90">
-            FeelingFullLA rescues surplus food and connects it with
-            neighbors across Los Angeles who need it most.
+            We&apos;re a highschool-run nonprofit that rescues surplus food and
+            gets it to neighbors across Los Angeles who need it most.
           </p>
-          <div className="mt-8 flex flex-wrap gap-4">
-            <a
-              href={INTEREST_FORM_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="rounded-full bg-white px-6 py-3 text-sm font-semibold text-charcoal transition-colors hover:bg-cream"
-            >
-              Volunteer With Us
-            </a>
+          <div className="mt-8">
             <Link
               href="/mission"
-              className="rounded-full border border-white/50 px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-white/10"
+              className="inline-block rounded-full bg-white px-6 py-3 text-sm font-semibold text-charcoal transition-colors hover:bg-cream"
             >
               Our Mission
             </Link>

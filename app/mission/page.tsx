@@ -1,5 +1,3 @@
-import { INTEREST_FORM_URL } from "../components/GoogleFormEmbed";
-
 const PILLARS = [
   {
     title: "Reduce Waste",
@@ -23,10 +21,7 @@ export default function MissionPage() {
     <>
       <section className="brand-gradient text-white">
         <div className="mx-auto max-w-4xl px-6 py-20 text-center sm:py-28">
-          <span className="inline-block rounded-full bg-white/20 px-4 py-1 text-xs font-semibold uppercase tracking-wide text-white">
-            Our Mission
-          </span>
-          <blockquote className="mt-8 text-2xl font-semibold leading-relaxed sm:text-4xl">
+          <blockquote className="text-2xl font-semibold leading-relaxed sm:text-4xl">
             &ldquo;Charity committed to reducing food waste in the Los
             Angeles area and beyond, devoted to mitigating hunger and
             helping those in need.&rdquo;
@@ -50,20 +45,6 @@ export default function MissionPage() {
                 </p>
               </div>
             ))}
-          </div>
-
-          <div className="mt-16 text-center">
-            <h2 className="text-2xl font-bold text-charcoal sm:text-3xl">
-              Want to be part of the work?
-            </h2>
-            <a
-              href={INTEREST_FORM_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-6 inline-block rounded-full bg-orange px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-peach"
-            >
-              Get Involved
-            </a>
           </div>
         </div>
       </section>
