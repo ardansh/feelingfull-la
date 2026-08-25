@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Team & Alumni | FeelingFullLA",
@@ -19,6 +20,8 @@ const SENIOR_VOLUNTEERS = [
   "Ardan Shendrikar",
   "Eric Cacavas",
   "Henry Lawrence",
+  "Josh Huang",
+  "Kai Pringle",
   "Lajus Collins",
   "Lorenz Collins",
   "Martha Valkov",
@@ -45,10 +48,6 @@ export default function TeamPage() {
           <h1 className="text-3xl font-bold sm:text-5xl">
             The people behind FeelingFullLA.
           </h1>
-          <p className="mx-auto mt-4 max-w-xl text-white/90">
-            A student-led crew of organizers and volunteers — past and present
-            — working to rescue food and feed our neighbors across Los Angeles.
-          </p>
         </div>
       </section>
 
@@ -79,10 +78,6 @@ export default function TeamPage() {
           <h2 className="mt-16 text-2xl font-bold text-charcoal sm:text-3xl">
             Senior Volunteers
           </h2>
-          <p className="mt-2 max-w-2xl text-sm text-charcoal/60">
-            Our most dedicated volunteers — thank you for showing up again and
-            again.
-          </p>
           <div className="mt-8 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4">
             {SENIOR_VOLUNTEERS.map((name) => (
               <div
@@ -97,6 +92,15 @@ export default function TeamPage() {
                 </span>
               </div>
             ))}
+          </div>
+
+          <div className="mt-10 text-center">
+            <Link
+              href="/volunteers"
+              className="inline-block rounded-full bg-orange px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-peach"
+            >
+              See all volunteers
+            </Link>
           </div>
         </div>
       </section>

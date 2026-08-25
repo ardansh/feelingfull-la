@@ -10,6 +10,8 @@ const GALLERY = [
   { src: "/gallery-5.png", alt: "FeelingFullLA volunteers distributing food" },
   { src: "/gallery-6.png", alt: "FeelingFullLA community partners" },
   { src: "/gallery-7.png", alt: "FeelingFullLA team out in the community" },
+  { src: "/gallery-8.png", alt: "FeelingFullLA volunteers with rescued greens at a FoodCycle LA pickup" },
+  { src: "/gallery-9.png", alt: "A crate of rescued plums" },
 ];
 
 export default function Home() {
@@ -17,10 +19,8 @@ export default function Home() {
     <>
       <section className="bg-cream text-charcoal">
         <div className="mx-auto max-w-6xl px-6 py-20 text-center sm:py-28">
-          <h1 className="mx-auto max-w-4xl text-4xl font-bold leading-tight sm:text-6xl">
-            <span className="brand-gradient-text">
-              Filling plates. Reducing waste. Building community.
-            </span>
+          <h1 className="mx-auto max-w-4xl text-4xl font-bold leading-tight text-orange sm:text-6xl">
+            Filling plates. Reducing waste. Building community.
           </h1>
           <p className="mx-auto mt-6 max-w-xl text-lg text-charcoal/70">
             We&apos;re a local charity that rescues surplus food and gets it to
