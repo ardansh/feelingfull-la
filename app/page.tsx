@@ -19,7 +19,7 @@ export default function Home() {
     <>
       <section className="bg-cream text-charcoal">
         <div className="mx-auto max-w-6xl px-6 py-20 text-center sm:py-28">
-          <h1 className="mx-auto max-w-4xl text-4xl font-bold leading-tight text-orange sm:text-6xl">
+          <h1 className="text-2xl font-bold leading-tight text-orange sm:text-3xl lg:text-4xl">
             Filling plates. Reducing waste. Building community.
           </h1>
           <p className="mx-auto mt-6 max-w-xl text-lg text-charcoal/70">
