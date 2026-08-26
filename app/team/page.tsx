@@ -13,6 +13,7 @@ const MANAGEMENT = [
   { name: "Todd Valkov", role: "Co-Head of Outreach" },
   { name: "Martha Valkov", role: "Senior Volunteer" },
   { name: "Lorenz Collins", role: "Senior Volunteer" },
+  { name: "Rama Karimi", role: "Senior Volunteer" },
 ];
 
 function initials(name: string) {
