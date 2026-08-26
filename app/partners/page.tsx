@@ -9,8 +9,8 @@ const PARTNERS = [
     logo: "/partners/westside-food-bank.png",
   },
   {
-    name: "CPO Food Closet",
-    initials: "CF",
+    name: "UCLA CPO Food Closet",
+    initials: "UC",
     logo: "/partners/cpo-food-closet.png",
   },
   {
