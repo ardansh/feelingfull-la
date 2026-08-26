@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Team & Alumni | FeelingFullLA",
@@ -14,22 +13,6 @@ const MANAGEMENT = [
   { name: "Todd Valkov", role: "Co-Head of Outreach" },
   { name: "Martha Valkov", role: "Senior Volunteer" },
   { name: "Lorenz Collins", role: "Senior Volunteer" },
-];
-
-// Senior volunteers — listed with consent, first-name alphabetical order.
-const SENIOR_VOLUNTEERS = [
-  "Ardan Shendrikar",
-  "Eric Cacavas",
-  "Henry Lawrence",
-  "Josh Huang",
-  "Kai Pringle",
-  "Lajus Collins",
-  "Lorenz Collins",
-  "Martha Valkov",
-  "Noah Benharash",
-  "Rama Karimi",
-  "Todd Valkov",
-  "Zachary Amster",
 ];
 
 function initials(name: string) {
@@ -74,34 +57,6 @@ export default function TeamPage() {
                 </div>
               </div>
             ))}
-          </div>
-
-          <h2 className="mt-16 text-2xl font-bold text-charcoal sm:text-3xl">
-            Senior Volunteers
-          </h2>
-          <div className="mt-8 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4">
-            {SENIOR_VOLUNTEERS.map((name) => (
-              <div
-                key={name}
-                className="flex items-center gap-3 rounded-xl border border-charcoal/10 bg-white px-4 py-3"
-              >
-                <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-orange/15 text-xs font-bold text-orange">
-                  {initials(name)}
-                </div>
-                <span className="text-sm font-medium text-charcoal">
-                  {name}
-                </span>
-              </div>
-            ))}
-          </div>
-
-          <div className="mt-10 text-center">
-            <Link
-              href="/volunteers"
-              className="inline-block rounded-full bg-orange px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-peach"
-            >
-              See all volunteers
-            </Link>
           </div>
         </div>
       </section>
