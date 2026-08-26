@@ -6,7 +6,7 @@ export const metadata: Metadata = {
 
 // Current management — name + role, listed with consent.
 const MANAGEMENT = [
-  { name: "Shaylan Chadha", role: "Co-Founder" },
+  { name: "Shaylan Chadha", role: "Founder" },
   { name: "Nate Berman", role: "Co-Director of Operations" },
   { name: "Ardan Shendrikar", role: "General Manager" },
   { name: "Lajus Collins", role: "General Manager" },
