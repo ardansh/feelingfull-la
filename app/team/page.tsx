@@ -5,14 +5,15 @@ export const metadata: Metadata = {
   title: "Team & Alumni | FeelingFullLA",
 };
 
-// Management / leadership (past and present) — name + role, listed with consent.
+// Current management — name + role, listed with consent.
 const MANAGEMENT = [
-  { name: "Shaylan Chadha", role: "Founder" },
-  { name: "Nate Berman", role: "General Manager (2022–2024)" },
-  { name: "Ardan Shendrikar", role: "General Manager (2024–2025)" },
-  { name: "Martha Valkov", role: "General Manager (2024–2025)" },
-  { name: "Lajus Collins", role: "General Manager (2025–current)" },
-  { name: "Todd Valkov", role: "Head of Outreach (2022–2024)" },
+  { name: "Shaylan Chadha", role: "Co-Founder" },
+  { name: "Nate Berman", role: "Co-Director of Operations" },
+  { name: "Ardan Shendrikar", role: "General Manager" },
+  { name: "Lajus Collins", role: "General Manager" },
+  { name: "Todd Valkov", role: "Co-Head of Outreach" },
+  { name: "Martha Valkov", role: "Senior Volunteer" },
+  { name: "Lorenz Collins", role: "Senior Volunteer" },
 ];
 
 // Senior volunteers — listed with consent, first-name alphabetical order.
@@ -54,7 +55,7 @@ export default function TeamPage() {
       <section className="bg-cream">
         <div className="mx-auto max-w-6xl px-6 py-20">
           <h2 className="text-2xl font-bold text-charcoal sm:text-3xl">
-            Management
+            Current Management
           </h2>
           <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {MANAGEMENT.map((person) => (
