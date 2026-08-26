@@ -30,28 +30,27 @@ export default function TeamPage() {
       <section className="brand-gradient text-white">
         <div className="mx-auto max-w-4xl px-6 py-20 text-center sm:py-28">
           <h1 className="text-3xl font-bold sm:text-5xl">
-            The people behind FeelingFullLA.
+            Current Management
           </h1>
         </div>
       </section>
 
       <section className="bg-cream">
         <div className="mx-auto max-w-6xl px-6 py-20">
-          <h2 className="text-2xl font-bold text-charcoal sm:text-3xl">
-            Current Management
-          </h2>
-          <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {MANAGEMENT.map((person) => (
               <div
                 key={person.name}
-                className="flex items-center gap-4 rounded-2xl border border-charcoal/10 bg-white p-6"
+                className="flex items-center gap-5 rounded-2xl border border-charcoal/10 bg-white p-6"
               >
-                <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-orange/15 text-base font-bold text-orange">
+                <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-full bg-orange/15 text-lg font-bold text-orange">
                   {initials(person.name)}
                 </div>
                 <div>
-                  <h3 className="font-bold text-charcoal">{person.name}</h3>
-                  <p className="mt-0.5 text-sm text-charcoal/60">
+                  <h3 className="text-xl font-bold text-charcoal">
+                    {person.name}
+                  </h3>
+                  <p className="mt-1 text-base font-semibold text-orange">
                     {person.role}
                   </p>
                 </div>
