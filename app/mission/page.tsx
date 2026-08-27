@@ -22,9 +22,7 @@ export default function MissionPage() {
       <section className="brand-gradient text-white">
         <div className="mx-auto max-w-4xl px-6 py-20 text-center sm:py-28">
           <blockquote className="text-2xl font-semibold leading-relaxed sm:text-4xl">
-            &ldquo;Charity committed to reducing food waste in the Los
-            Angeles area and beyond, devoted to mitigating hunger and
-            helping those in need.&rdquo;
+            Reducing food waste, one drop-off at a time.
           </blockquote>
         </div>
       </section>
