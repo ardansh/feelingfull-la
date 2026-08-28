@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import AnimatedStat from "./components/AnimatedStat";
+import Gallery from "./components/Gallery";
 
 const GALLERY = [
   { src: "/gallery-1.png", alt: "FeelingFullLA volunteers with awards at Upward Bound House" },
@@ -35,25 +36,7 @@ export default function Home() {
             </Link>
           </div>
 
-          <div className="mt-16 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4">
-            {GALLERY.map((photo, i) => (
-              <div
-                key={photo.src}
-                className={`relative aspect-square overflow-hidden rounded-2xl ${
-                  i === 0 ? "col-span-2 row-span-2 sm:col-span-2 sm:row-span-2" : ""
-                }`}
-              >
-                <Image
-                  src={photo.src}
-                  alt={photo.alt}
-                  fill
-                  sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
-                  className="object-cover transition-transform duration-300 hover:scale-105"
-                  priority={i === 0}
-                />
-              </div>
-            ))}
-          </div>
+          <Gallery photos={GALLERY} />
         </div>
 
         <div className="border-t border-charcoal/10">
