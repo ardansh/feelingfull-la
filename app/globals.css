@@ -8,8 +8,7 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-nunito);
-  --font-display: var(--font-fraunces);
+  --font-sans: "Times New Roman", Times, serif;
 
   /* Warm palette pulled from the FeelingFullLA logo */
   --color-charcoal: #34211a; /* warm near-black: dark text, footer, dark cards */
@@ -23,14 +22,7 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-nunito), ui-sans-serif, system-ui, sans-serif;
-}
-
-/* Headings use the warmer serif for a more human, editorial feel */
-h1,
-h2,
-h3 {
-  font-family: var(--font-fraunces), Georgia, "Times New Roman", serif;
+  font-family: "Times New Roman", Times, serif;
 }
 
 /* Signature warm gradient (coral -> orange -> gold), matching the logo backdrop */
