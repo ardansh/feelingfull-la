@@ -43,7 +43,7 @@ export default function Home() {
           <div className="mx-auto grid max-w-6xl grid-cols-1 gap-8 px-6 py-16 sm:grid-cols-3">
             <AnimatedStat target={100000} suffix="+" label="Lbs. of Food Donated" />
             <AnimatedStat target={6} suffix="+" label="Community Partners" />
-            <AnimatedStat target={50} suffix="+" label="Volunteers" />
+            <AnimatedStat target={50} suffix="+" label="Volunteers/Alumni" />
           </div>
         </div>
       </section>
