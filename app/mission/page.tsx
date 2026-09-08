@@ -3,16 +3,19 @@ const PILLARS = [
     title: "Reduce Waste",
     description:
       "We rescue surplus, still-good food from grocers, farms, and restaurants before it ends up in a landfill.",
+    stats: ["100k lbs donated"],
   },
   {
     title: "Fight Hunger",
     description:
       "We get that food into the hands of individuals and families across Los Angeles facing food insecurity.",
+    stats: ["3,000 families fed"],
   },
   {
     title: "Build Community",
     description:
       "We bring students, volunteers, and local organizations together around a shared cause.",
+    stats: ["8 partner organizations", "50+ volunteers"],
   },
 ];
 
@@ -41,6 +44,13 @@ export default function MissionPage() {
                 <p className="mt-3 text-sm text-charcoal/70">
                   {pillar.description}
                 </p>
+                <div className="mt-4 border-t border-charcoal/10 pt-4">
+                  {pillar.stats.map((stat) => (
+                    <p key={stat} className="text-base font-bold text-orange">
+                      {stat}
+                    </p>
+                  ))}
+                </div>
               </div>
             ))}
           </div>
